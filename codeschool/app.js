@@ -1,8 +1,9 @@
 var fs = require('fs');
 var http = require('http');
+var colors = require('colors');
 
 http.createServer(function(request,response){
-	var newFile = fs.createWriteStream("readme_copy.md");
+	var newFile = fs.createWriteStream("uploadedFile");
 	var fileBytes = request.headers['content-length'];
 	var uploadedBytes = 0;
 	request.pipe(newFile);
@@ -16,3 +17,5 @@ http.createServer(function(request,response){
 		response.end('uploaded!');
 	})
 }).listen(6666);
+
+console.log("\nAguardando uploads...\n".cyan);

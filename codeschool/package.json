@@ -1,0 +1,9 @@
+{
+  "name": "code-school-learning",
+  "description": "A package for learning node.js",
+  "author": "Alejandro Schmechel <alejandro.schmechel@gmail.com>",
+  "dependencies": {
+    "colors": ">= 0.6.2"
+  },
+  "engine": "node 0.10.26"
+}
